@@ -93,7 +93,7 @@
     .trust-pill-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--olive-pale); flex-shrink: 0; }
 
     /* RIGHT: Form */
-    .hero-form { width: 100%; animation: fadeUp 0.85s 0.12s ease both; margin-left: 40px; }
+    .hero-form { width: 100%; animation: fadeUp 0.85s 0.12s ease both; margin-left: 20px; margin-top: 40px; }
     .form-card {
       background: #fff; border-radius: 4px;
       padding: 36px 32px 28px;
@@ -398,7 +398,7 @@
       <div class="form-card">
         <div class="form-headline">Make the Move Easy.</div>
         <div class="form-headline">Get Your Cash Offer Today!</div>
-        <p class="form-sub">Fill out the form — we'll respond within 24 hours.</p>
+        <p class="form-sub">Enter your information. We'll handle the rest.</p>
         <form onsubmit="handleSubmit(event)">
           <div class="form-group"><input type="text" placeholder="Enter Your Address*" required/></div>
           <div class="form-row">
@@ -413,7 +413,7 @@
             <input type="checkbox" id="comms" style="width:16px;height:16px;margin-top:3px;flex-shrink:0;accent-color:var(--olive);"/>
             <label for="comms" style="font-size:11px;color:#9a9490;line-height:1.55;font-weight:400;">I agree to receive transactional or conversational communications from Passage Property Group via text messages, phone calls, and emails related to my real estate inquiry. Message frequency varies. Reply STOP to opt out. Reply HELP for help. Msg &amp; data rates may apply. Your information is secure and will not be sold or shared with third parties for promotional purposes.</label>
           </div>
-          <button type="submit" class="btn-submit">Get My Free Offer Now →</button>
+          <button type="submit" class="btn-submit">Receive My Cash Offer →</button>
         </form>
         <p class="form-lock">
           <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
@@ -426,16 +426,37 @@
   </div>
 </section>
 
-<!-- TRUST BAR -->
-<div class="trust-bar">
-  <div class="trust-bar-inner">
-    <div class="tb-item"><div class="tb-check"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>No Agent Commissions</div>
-    <div class="tb-item"><div class="tb-check"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>No Repairs or Cleaning</div>
-    <div class="tb-item"><div class="tb-check"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Cash Offer in 24 Hours</div>
-    <div class="tb-item"><div class="tb-check"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Close in as Little as 7 Days</div>
-    <div class="tb-item"><div class="tb-check"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>No Closing Costs</div>
+<!-- TRUST BADGES -->
+<div style="background:#ffffff;padding:32px 48px;">
+  <div style="max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-around;flex-wrap:wrap;gap:24px;">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <img src="BBB-Logo-1.png" alt="BBB Accredited Business" style="height:48px;width:auto;"/>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;color:#1c1c1e;">
+      <span style="font-size:22px;">⭐</span>
+      <div><div style="font-size:13px;font-weight:600;color:#1c1c1e;">5.0 Google Rating</div><div style="font-size:11px;color:#7a7469;">Verified Reviews</div></div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;color:#1c1c1e;">
+      <span style="font-size:22px;">🏠</span>
+      <div><div style="font-size:13px;font-weight:600;color:#1c1c1e;">Local DFW Buyers</div><div style="font-size:11px;color:#7a7469;">Family Owned</div></div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;color:#1c1c1e;">
+      <span style="font-size:22px;">💰</span>
+      <div><div style="font-size:13px;font-weight:600;color:#1c1c1e;">Cash Offers Only</div><div style="font-size:11px;color:#7a7469;">No Financing Delays</div></div>
+    </div>
   </div>
 </div>
+
+<!-- SOLUTION TAGLINE BAND -->
+<div style="background:#ffffff;padding:72px 48px;">
+  <div style="max-width:900px;margin:0 auto;text-align:center;">
+    <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#6b7c5a;margin-bottom:18px;">Our Philosophy</p>
+    <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(28px,4vw,48px);font-weight:800;color:#1c1c1e;line-height:1.12;letter-spacing:-0.02em;margin-bottom:20px;">A solution-based approach<br/>to your real estate needs.</h2>
+    <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:17px;font-weight:300;color:#7a7469;line-height:1.75;max-width:640px;margin:0 auto;">Whether you need to move quickly or simply want to explore your options, we meet you where you are. No pressure, no one-size-fits-all answers — just thoughtful solutions tailored to your situation.</p>
+  </div>
+</div>
+
+
 
 <!-- HOW IT WORKS -->
 <section class="section" id="how" style="background:#fff;">
@@ -466,45 +487,19 @@
   </div>
 </section>
 
-<!-- SOLUTION TAGLINE BAND -->
-<div style="background:#f5f2ed;padding:72px 48px;border-bottom:1px solid #e6e0d8;">
-  <div style="max-width:900px;margin:0 auto;text-align:center;">
-    <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#6b7c5a;margin-bottom:18px;">Our Philosophy</p>
-    <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(28px,4vw,48px);font-weight:800;color:#1c1c1e;line-height:1.12;letter-spacing:-0.02em;margin-bottom:20px;">A solution-based approach<br/>to your real estate needs.</h2>
-    <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:17px;font-weight:300;color:#7a7469;line-height:1.75;max-width:640px;margin:0 auto;">Whether you need to move quickly or simply want to explore your options, we meet you where you are. No pressure, no one-size-fits-all answers — just thoughtful solutions tailored to your situation.</p>
-  </div>
-</div>
-
-
-
-<!-- TRUST BADGES -->
-<div style="background:#1c1c1e;padding:40px 48px;border-bottom:1px solid rgba(255,255,255,0.06);">
-  <div style="max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-around;flex-wrap:wrap;gap:24px;">
-    <div style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,0.7);">
-      <span style="font-size:22px;">🏅</span>
-      <div><div style="font-size:13px;font-weight:600;">BBB Accredited</div><div style="font-size:11px;color:rgba(255,255,255,0.4);">A+ Rating</div></div>
-    </div>
-    <div style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,0.7);">
-      <span style="font-size:22px;">🏛️</span>
-      <div><div style="font-size:13px;font-weight:600;">Title Company Closing</div><div style="font-size:11px;color:rgba(255,255,255,0.4);">Safe & Secure</div></div>
-    </div>
-    <div style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,0.7);">
-      <span style="font-size:22px;">⭐</span>
-      <div><div style="font-size:13px;font-weight:600;">5.0 Google Rating</div><div style="font-size:11px;color:rgba(255,255,255,0.4);">Verified Reviews</div></div>
-    </div>
-    <div style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,0.7);">
-      <span style="font-size:22px;">🏠</span>
-      <div><div style="font-size:13px;font-weight:600;">Local DFW Buyers</div><div style="font-size:11px;color:rgba(255,255,255,0.4);">Family Owned</div></div>
-    </div>
-    <div style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,0.7);">
-      <span style="font-size:22px;">💰</span>
-      <div><div style="font-size:13px;font-weight:600;">Cash Offers Only</div><div style="font-size:11px;color:rgba(255,255,255,0.4);">No Financing Delays</div></div>
-    </div>
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="tb-item"><div class="tb-check"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>No Agent Commissions</div>
+    <div class="tb-item"><div class="tb-check"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>No Repairs or Cleaning</div>
+    <div class="tb-item"><div class="tb-check"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Cash Offer in 24 Hours</div>
+    <div class="tb-item"><div class="tb-check"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Close in as Little as 7 Days</div>
+    <div class="tb-item"><div class="tb-check"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>No Closing Costs</div>
   </div>
 </div>
 
 <!-- WHY US -->
-<div style="background:#fff;border-top:1px solid #e6e0d8;border-bottom:1px solid #e6e0d8;">
+<div style="background:#fff;">
   <div style="max-width:1100px;margin:0 auto;padding:96px 48px;">
 
     <!-- Eyebrow above both columns -->
@@ -522,19 +517,19 @@
 
       <!-- RIGHT -->
       <div style="border-left:1px solid #e6e0d8;padding-left:64px;">
-        <div style="padding:0 0 20px 0;border-bottom:1px solid #e6e0d8;margin-bottom:20px;">
+        <div style="padding:0 0 20px 0;margin-bottom:20px;">
           <div style="font-size:15px;font-weight:700;color:#1c1c1e;margin-bottom:5px;">Fast closings — as little as 7 days</div>
           <div style="font-size:14px;font-weight:300;color:#7a7469;line-height:1.65;">No waiting on bank approvals, buyer financing, or market conditions.</div>
         </div>
-        <div style="padding:0 0 20px 0;border-bottom:1px solid #e6e0d8;margin-bottom:20px;">
+        <div style="padding:0 0 20px 0;margin-bottom:20px;">
           <div style="font-size:15px;font-weight:700;color:#1c1c1e;margin-bottom:5px;">We buy as-is — any condition</div>
           <div style="font-size:14px;font-weight:300;color:#7a7469;line-height:1.65;">Fire damage, foundation issues, hoarder homes. We've bought them all.</div>
         </div>
-        <div style="padding:0 0 20px 0;border-bottom:1px solid #e6e0d8;margin-bottom:20px;">
+        <div style="padding:0 0 20px 0;margin-bottom:20px;">
           <div style="font-size:15px;font-weight:700;color:#1c1c1e;margin-bottom:5px;">Zero fees or commissions</div>
           <div style="font-size:14px;font-weight:300;color:#7a7469;line-height:1.65;">Our offer is exactly what you walk away with. We also cover closing costs.</div>
         </div>
-        <div style="padding:0 0 20px 0;border-bottom:1px solid #e6e0d8;margin-bottom:20px;">
+        <div style="padding:0 0 20px 0;margin-bottom:20px;">
           <div style="font-size:15px;font-weight:700;color:#1c1c1e;margin-bottom:5px;">BBB Accredited A+ — locally owned</div>
           <div style="font-size:14px;font-weight:300;color:#7a7469;line-height:1.65;">We're based right here in DFW and invested in this community.</div>
         </div>
@@ -547,6 +542,20 @@
     </div>
   </div>
 </div>
+
+<!-- PRE-CTA TESTIMONIAL -->
+<div style="background:#ffffff;padding:72px 48px;">
+  <div style="max-width:800px;margin:0 auto;text-align:center;">
+    <div style="font-size:20px;color:#f4a853;margin-bottom:24px;">★★★★★</div>
+    <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(18px,2.5vw,26px);font-weight:300;color:var(--olive);line-height:1.6;margin-bottom:28px;font-style:italic;">"I didn't want strangers walking through my house for months. No showings, no open houses, no hassle — they made the whole thing completely painless. Easiest decision I ever made."</p>
+    <div style="font-size:14px;font-weight:600;color:var(--olive);">James H. &nbsp;·&nbsp; Irving, TX</div>
+    <div style="margin-top:24px;">
+      <a href="reviews.html" style="font-size:13px;color:var(--olive);text-decoration:none;border-bottom:1px solid var(--olive);padding-bottom:2px;">Read All Reviews →</a>
+    </div>
+  </div>
+</div>
+
+
 
 <!-- SITUATIONS -->
 <section class="section">
@@ -570,22 +579,8 @@
 
 
 
-<!-- PRE-CTA TESTIMONIAL -->
-<div style="background:var(--olive);padding:72px 48px;">
-  <div style="max-width:800px;margin:0 auto;text-align:center;">
-    <div style="font-size:20px;color:#fff;margin-bottom:24px;">★★★★★</div>
-    <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(18px,2.5vw,26px);font-weight:300;color:#fff;line-height:1.6;margin-bottom:28px;font-style:italic;">"I didn't want strangers walking through my house for months. No showings, no open houses, no hassle — they made the whole thing completely painless. Easiest decision I ever made."</p>
-    <div style="font-size:14px;font-weight:600;color:rgba(255,255,255,0.8);">James H. &nbsp;·&nbsp; Irving, TX</div>
-    <div style="margin-top:24px;">
-      <a href="reviews.html" style="font-size:13px;color:rgba(255,255,255,0.7);text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.4);padding-bottom:2px;">Read All Reviews →</a>
-    </div>
-  </div>
-</div>
-
-
-
 <!-- COMPARISON TABLE -->
-<div style="background:#fff;padding:72px 48px;border-top:1px solid #e6e0d8;">
+<div style="background:#fff;padding:72px 48px;">
   <div style="max-width:1100px;margin:0 auto;">
     <div style="font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--olive);margin-bottom:12px;">Side by Side</div>
     <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(24px,3vw,40px);font-weight:800;color:#1c1c1e;letter-spacing:-0.02em;margin-bottom:8px;line-height:1.1;">Passage Property Group vs. Listing with an Agent</h2>
@@ -598,13 +593,13 @@
           <th style="text-align:center;padding:14px 20px;font-size:13px;color:#7a7469;border-bottom:2px solid #1c1c1e;">Listing with Agent</th>
         </tr></thead>
         <tbody>
-          <tr style="border-bottom:1px solid #e6e0d8;"><td style="padding:14px 0;font-size:13px;font-weight:600;color:#1c1c1e;">💸 Commission Fees</td><td style="padding:14px 20px;text-align:center;font-size:13px;font-weight:600;color:var(--olive);">$0 — None</td><td style="padding:14px 20px;text-align:center;font-size:13px;color:#7a7469;">5–6% paid by you</td></tr>
-          <tr style="border-bottom:1px solid #e6e0d8;background:#fafaf9;"><td style="padding:14px 0;font-size:13px;font-weight:600;color:#1c1c1e;">💰 Closing Costs</td><td style="padding:14px 20px;text-align:center;font-size:13px;font-weight:600;color:var(--olive);">We pay all</td><td style="padding:14px 20px;text-align:center;font-size:13px;color:#7a7469;">Seller typically pays</td></tr>
-          <tr style="border-bottom:1px solid #e6e0d8;"><td style="padding:14px 0;font-size:13px;font-weight:600;color:#1c1c1e;">🔧 Repairs Required</td><td style="padding:14px 20px;text-align:center;font-size:13px;font-weight:600;color:var(--olive);">None — as-is</td><td style="padding:14px 20px;text-align:center;font-size:13px;color:#7a7469;">Usually required</td></tr>
-          <tr style="border-bottom:1px solid #e6e0d8;background:#fafaf9;"><td style="padding:14px 0;font-size:13px;font-weight:600;color:#1c1c1e;">⏳ Time to Close</td><td style="padding:14px 20px;text-align:center;font-size:13px;font-weight:600;color:var(--olive);">7–14 days</td><td style="padding:14px 20px;text-align:center;font-size:13px;color:#7a7469;">60–90+ days</td></tr>
-          <tr style="border-bottom:1px solid #e6e0d8;"><td style="padding:14px 0;font-size:13px;font-weight:600;color:#1c1c1e;">🚪 Showings</td><td style="padding:14px 20px;text-align:center;font-size:13px;font-weight:600;color:var(--olive);">None</td><td style="padding:14px 20px;text-align:center;font-size:13px;color:#7a7469;">Multiple required</td></tr>
-          <tr style="border-bottom:1px solid #e6e0d8;background:#fafaf9;"><td style="padding:14px 0;font-size:13px;font-weight:600;color:#1c1c1e;">⚠️ Fall-Through Risk</td><td style="padding:14px 20px;text-align:center;font-size:13px;font-weight:600;color:var(--olive);">None — cash</td><td style="padding:14px 20px;text-align:center;font-size:13px;color:#7a7469;">15%+ fall through</td></tr>
-          <tr style="border-bottom:1px solid #e6e0d8;"><td style="padding:14px 0;font-size:13px;font-weight:600;color:#1c1c1e;">📅 Flexible Closing</td><td style="padding:14px 20px;text-align:center;font-size:13px;font-weight:600;color:var(--olive);">Yes — you choose</td><td style="padding:14px 20px;text-align:center;font-size:13px;color:#7a7469;">Dictated by lender</td></tr>
+          <tr style=""><td style="padding:14px 0;font-size:13px;font-weight:600;color:#1c1c1e;">Commission Fees</td><td style="padding:14px 20px;text-align:center;font-size:13px;font-weight:600;color:var(--olive);">$0 — None</td><td style="padding:14px 20px;text-align:center;font-size:13px;color:#7a7469;">5–6% paid by you</td></tr>
+          <tr style="background:#fafaf9;"><td style="padding:14px 0;font-size:13px;font-weight:600;color:#1c1c1e;">Closing Costs</td><td style="padding:14px 20px;text-align:center;font-size:13px;font-weight:600;color:var(--olive);">We pay all</td><td style="padding:14px 20px;text-align:center;font-size:13px;color:#7a7469;">Seller typically pays</td></tr>
+          <tr style=""><td style="padding:14px 0;font-size:13px;font-weight:600;color:#1c1c1e;">Repairs Required</td><td style="padding:14px 20px;text-align:center;font-size:13px;font-weight:600;color:var(--olive);">None — as-is</td><td style="padding:14px 20px;text-align:center;font-size:13px;color:#7a7469;">Usually required</td></tr>
+          <tr style="background:#fafaf9;"><td style="padding:14px 0;font-size:13px;font-weight:600;color:#1c1c1e;">Time to Close</td><td style="padding:14px 20px;text-align:center;font-size:13px;font-weight:600;color:var(--olive);">7–14 days</td><td style="padding:14px 20px;text-align:center;font-size:13px;color:#7a7469;">60–90+ days</td></tr>
+          <tr style=""><td style="padding:14px 0;font-size:13px;font-weight:600;color:#1c1c1e;">Showings</td><td style="padding:14px 20px;text-align:center;font-size:13px;font-weight:600;color:var(--olive);">None</td><td style="padding:14px 20px;text-align:center;font-size:13px;color:#7a7469;">Multiple required</td></tr>
+          <tr style="background:#fafaf9;"><td style="padding:14px 0;font-size:13px;font-weight:600;color:#1c1c1e;">Fall-Through Risk</td><td style="padding:14px 20px;text-align:center;font-size:13px;font-weight:600;color:var(--olive);">None — cash</td><td style="padding:14px 20px;text-align:center;font-size:13px;color:#7a7469;">15%+ fall through</td></tr>
+          <tr style=""><td style="padding:14px 0;font-size:13px;font-weight:600;color:#1c1c1e;">Flexible Closing</td><td style="padding:14px 20px;text-align:center;font-size:13px;font-weight:600;color:var(--olive);">Yes — you choose</td><td style="padding:14px 20px;text-align:center;font-size:13px;color:#7a7469;">Dictated by lender</td></tr>
         </tbody>
       </table>
     </div>
