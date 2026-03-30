@@ -69,12 +69,8 @@
 
     /* LEFT */
     .hero-text { animation: fadeUp 0.85s ease both; }
-    .hero-location {
-      display: inline-flex; align-items: center; gap: 7px;
-      color: rgba(255,255,255,0.6); font-size: 12px; font-weight: 500;
-      letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 24px;
-    }
-    .hero-location svg { color: var(--olive-pale); }
+    .hero-location { display: none; }
+    .hero-location svg { display: none; }
     .hero h1 { 
       font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: clamp(36px, 4.5vw, 72px);
@@ -385,10 +381,7 @@
 
     <!-- LEFT: Big headline -->
     <div class="hero-text">
-      <div class="hero-location">
-        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        Dallas · Fort Worth · DFW Metroplex
-      </div>
+      
       <h1>We Buy<br/>Homes in<br/><span>Dallas,</span><br/>Fort Worth<br/>Texas</h1>
       <p class="hero-sub">Get a fair cash offer within 24 hours — no repairs, no agents, no fees. We close on your schedule, sometimes in as little as 7 days.</p>
       <div class="trust-row">
