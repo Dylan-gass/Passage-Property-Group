@@ -58,7 +58,7 @@
     .hero-video-wrap video { position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; opacity:1; }
     /* video replaced by iframe */
     /* Overlay: strong on left for text, softer on right for form contrast */
-    .hero-overlay { display:none; }
+    .hero-overlay { position:absolute; inset:0; z-index:1; background: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.1) 25%, rgba(0,0,0,0.0) 60%); }
     .hero-inner {
       position: relative; z-index: 2; width: 100%; max-width: 1360px;
       margin: 0 auto; padding: 80px 48px 80px;
@@ -73,7 +73,7 @@
       letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 24px;
     }
     .hero-location svg { color: var(--olive-pale); }
-    .hero h1 {
+    .hero h1 { text-shadow: 0 2px 8px rgba(0,0,0,0.3);
       font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: clamp(52px, 7vw, 96px);
       font-weight: 800; line-height: 0.96;
@@ -577,13 +577,13 @@
 
 
 <!-- PRE-CTA TESTIMONIAL -->
-<div style="background:#fff;padding:72px 48px;border-top:1px solid #e6e0d8;border-bottom:1px solid #e6e0d8;">
+<div style="background:var(--olive);padding:72px 48px;">
   <div style="max-width:800px;margin:0 auto;text-align:center;">
-    <div style="font-size:20px;color:#f4a853;margin-bottom:24px;">★★★★★</div>
-    <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(18px,2.5vw,26px);font-weight:300;color:var(--olive);line-height:1.6;margin-bottom:28px;font-style:italic;">"I didn't want strangers walking through my house for months. No showings, no open houses, no hassle — they made the whole thing completely painless. Easiest decision I ever made."</p>
-    <div style="font-size:14px;font-weight:600;color:#1c1c1e;">James H. &nbsp;·&nbsp; Irving, TX</div>
+    <div style="font-size:20px;color:#fff;margin-bottom:24px;">★★★★★</div>
+    <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(18px,2.5vw,26px);font-weight:300;color:#fff;line-height:1.6;margin-bottom:28px;font-style:italic;">"I didn't want strangers walking through my house for months. No showings, no open houses, no hassle — they made the whole thing completely painless. Easiest decision I ever made."</p>
+    <div style="font-size:14px;font-weight:600;color:rgba(255,255,255,0.8);">James H. &nbsp;·&nbsp; Irving, TX</div>
     <div style="margin-top:24px;">
-      <a href="reviews.html" style="font-size:13px;color:var(--olive);text-decoration:none;border-bottom:1px solid var(--olive);padding-bottom:2px;">Read All Reviews →</a>
+      <a href="reviews.html" style="font-size:13px;color:rgba(255,255,255,0.7);text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.4);padding-bottom:2px;">Read All Reviews →</a>
     </div>
   </div>
 </div>
