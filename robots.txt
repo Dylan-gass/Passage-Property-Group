@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /private/
+
+Sitemap: https://passagepropertygroup.com/sitemap.xml
+
+# Passage Property Group | We Buy Houses Dallas Fort Worth TX
+# (682) 610-3809
