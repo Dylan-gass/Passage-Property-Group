@@ -63,7 +63,7 @@
     .hero-inner {
       position: relative; z-index: 2; width: 100%; max-width: 1400px;
       margin: 0 auto; padding: 80px 32px 80px 0px;
-      display: grid; grid-template-columns: 1fr 460px; gap: 48px; align-items: center;
+      display: grid; grid-template-columns: 1fr 460px; gap: 24px; align-items: center;
       box-sizing: border-box;
     }
 
@@ -137,17 +137,18 @@
     }
 
     /* scroll indicator */
-    .scroll-line-wrap {
+    .scroll-line-wrap { display:none !important; }
       position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%);
       z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 8px;
       animation: fadeUp 1.2s 0.5s ease both;
     }
-    .scroll-line {
+    .scroll-line { display:none; }
+    .scroll-line-DISABLED {
       width: 1px; height: 44px;
       background: linear-gradient(to bottom, rgba(255,255,255,0.5), transparent);
       animation: pulse 2s ease-in-out infinite;
     }
-    .scroll-txt { color: rgba(255,255,255,0.35); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; }
+    .scroll-txt { display:none; }
     @keyframes pulse { 0%,100%{opacity:.4;transform:scaleY(1)} 50%{opacity:.9;transform:scaleY(1.08)} }
 
     /* ── TRUST BAR ── */
@@ -421,9 +422,7 @@
       </div>
     </div>
   </div>
-  <div class="scroll-line-wrap">
-    <div class="scroll-line"></div>
-    <span class="scroll-txt">Scroll</span>
+    
   </div>
 </section>
 
