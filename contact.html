@@ -610,5 +610,12 @@
 </div>
 <style>@media(max-width:768px){#mobile-cta{display:flex!important;}body{padding-bottom:70px;}}</style>
 <script>const n=document.getElementById('navbar');if(n)window.addEventListener('scroll',()=>n.classList.toggle('scrolled',window.scrollY>40));</script>
+<script>
+function toggleMenu() {
+  const menu = document.getElementById('mobile-menu');
+  menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+  document.body.style.overflow = menu.style.display === 'flex' ? 'hidden' : '';
+}
+</script>
 </body>
 </html>
