@@ -25,7 +25,7 @@
       --text: #1c1c1e;
     }
     html { scroll-behavior: smooth; }
-    body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--cream); color: var(--text); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    html, body { overflow-x: hidden; } body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--cream); color: var(--text); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
 
     /* ── NAV ── */
     nav {
@@ -352,6 +352,7 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"RealEstateAgent","name":"Passage Property Group","description":"We buy houses for cash in Garland, TX. No repairs, no fees, close in as little as 7 days.","areaServed":{"@type":"City","name":"Garland","addressRegion":"TX"},"telephone":"+16826103809","url":"https://passagepropertygroup.com/sell-house-garland.html","priceRange":"$$"}</script>
 <style>
   #navbar { position:relative !important; background:#fff !important; border-bottom:1px solid #e8e8e8 !important; }
+  #hamburger span { background: #1c1c1e !important; }
   #navbar * { color:#1c1c1e !important; }
   #navbar .nav-cta { background:#6b7c5a !important; color:#fff !important; }
   .page-hero { background:#ffffff !important; padding:64px 48px 60px !important; border-bottom:1px solid #ebebeb !important; text-align:center !important; }
@@ -589,9 +590,9 @@
 </div>
 
 <!-- FOOTER -->
-<footer style="background:#111111;padding:64px 48px 0;font-family:'Plus Jakarta Sans',sans-serif;">
-  <div style="max-width:1200px;margin:0 auto;">
-    <div style="display:grid;grid-template-columns:280px 1fr 1fr 1fr;gap:48px;padding-bottom:56px;border-bottom:1px solid rgba(255,255,255,0.1);">
+<footer style="background:#111111;padding:64px 48px 0;font-family:'Plus Jakarta Sans',sans-serif;overflow-x:hidden;">
+  <div style="max-width:100%;margin:0 auto;box-sizing:border-box;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:32px;padding-bottom:56px;border-bottom:1px solid rgba(255,255,255,0.1);">
       <div>
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
           <svg width="22" height="32" viewBox="0 0 52 80" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -678,12 +679,5 @@
   </div>
 </footer>
 <script>const n=document.getElementById('navbar');if(n)window.addEventListener('scroll',()=>n.classList.toggle('scrolled',window.scrollY>40));</script>
-<!-- MOBILE STICKY CTA -->
-<div id="mobile-cta" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:999;background:#1c1c1e;border-top:1px solid rgba(255,255,255,0.1);padding:12px 20px;flex-direction:row;gap:10px;align-items:center;">
-  <a href="tel:+16826103809" style="flex:1;display:flex;align-items:center;justify-content:center;gap:8px;background:rgba(255,255,255,0.08);color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:600;padding:12px;border-radius:6px;text-decoration:none;">📞 Call Now</a>
-  <a href="index.html#offer" style="flex:2;display:flex;align-items:center;justify-content:center;background:var(--olive);color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;padding:12px;border-radius:6px;text-decoration:none;letter-spacing:0.03em;">Get My Cash Offer →</a>
-</div>
-<style>
-  @media(max-width:768px) { #mobile-cta { display:flex !important; } body { padding-bottom:70px; } }
-</style>
+
 </body></html>

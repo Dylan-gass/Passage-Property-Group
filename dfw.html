@@ -23,7 +23,7 @@
       --text: #1c1c1e;
     }
     html { scroll-behavior: smooth; }
-    body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--cream); color: var(--text); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    html, body { overflow-x: hidden; } body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--cream); color: var(--text); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
 
     /* ── NAV ── */
     nav {
@@ -462,7 +462,7 @@
 
 <!-- ALL 16 CITIES -->
 <div style="background:#f5f2ed;padding:72px 48px;">
-  <div style="max-width:1200px;margin:0 auto;">
+  <div style="max-width:100%;margin:0 auto;box-sizing:border-box;">
     <div class="s-eye">16 Cities · All of DFW</div>
     <h2 class="s-h2">Select Your City for a Local Cash Offer</h2>
     <p class="s-p" style="max-width:600px;">We buy houses in every major city in the Dallas Fort Worth Metroplex. Click your city for specific local information and to request your free cash offer.</p>
@@ -593,9 +593,9 @@
   </div>
 </div>
 
-<footer style="background:#111111;padding:64px 48px 0;font-family:'Plus Jakarta Sans',sans-serif;">
-  <div style="max-width:1200px;margin:0 auto;">
-    <div style="display:grid;grid-template-columns:280px 1fr 1fr 1fr;gap:48px;padding-bottom:56px;border-bottom:1px solid rgba(255,255,255,0.1);">
+<footer style="background:#111111;padding:64px 48px 0;font-family:'Plus Jakarta Sans',sans-serif;overflow-x:hidden;">
+  <div style="max-width:100%;margin:0 auto;box-sizing:border-box;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:32px;padding-bottom:56px;border-bottom:1px solid rgba(255,255,255,0.1);">
       <div>
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
           <svg width="22" height="32" viewBox="0 0 52 80" fill="none" xmlns="http://www.w3.org/2000/svg">
