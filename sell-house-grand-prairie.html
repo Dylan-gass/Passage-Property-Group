@@ -332,25 +332,73 @@
     .cta-blk-inner { position:relative;z-index:1;max-width:600px;margin:0 auto; }
     @media(max-width:768px){.page-hero{padding:96px 20px 48px;}.sw{padding:52px 20px;}.cta-blk{padding:52px 20px;}}
 
+
+  
     @media (max-width: 768px) {
+      /* Nav */
       .nav-links { display: none !important; }
       .nav-phone { display: none !important; }
       .nav-inner { padding: 0 20px !important; }
       #hamburger { display: flex !important; flex-direction: column; gap: 5px; }
       #hamburger span { background: #1c1c1e !important; }
       .nav-cta { font-size: 11px !important; padding: 8px 12px !important; }
-      .page-hero { padding: 80px 24px 48px !important; }
-      .page-hero h1 { font-size: clamp(28px, 8vw, 42px) !important; }
-      .section-inner, .s-inner { padding: 48px 24px !important; }
-      [style*="padding:80px 48px"] { padding: 48px 24px !important; }
-      [style*="padding: 80px 48px"] { padding: 48px 24px !important; }
-      .steps-grid, .why-grid, .city-grid { grid-template-columns: 1fr !important; }
-      .footer-cols { grid-template-columns: 1fr 1fr !important; gap: 32px !important; }
-      .form-row { flex-direction: column !important; }
-      table { font-size: 12px !important; display: block; overflow-x: auto; }
-      td, th { padding: 10px 8px !important; }
-    }
 
+      /* Hero - stack text above form */
+      .hero-inner {
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 100px 20px 40px !important;
+        gap: 28px !important;
+      }
+      .hero-text { width: 100% !important; }
+      .hero-form { width: 100% !important; }
+      .hero h1 { font-size: clamp(32px, 9vw, 48px) !important; line-height: 0.97 !important; }
+      .form-row { flex-direction: column !important; gap: 10px !important; }
+      .form-card { padding: 20px 16px !important; }
+      .trust-row { gap: 6px !important; }
+      .trust-pill { font-size: 10px !important; padding: 5px 9px !important; }
+
+      /* Page hero */
+      .page-hero { padding: 80px 20px 40px !important; }
+      .page-hero h1 { font-size: clamp(26px, 8vw, 40px) !important; }
+      .page-hero-inner { padding: 0 !important; }
+
+      /* Section padding */
+      [style*="padding:80px 48px"] { padding: 48px 20px !important; }
+      [style*="padding: 80px 48px"] { padding: 48px 20px !important; }
+      [style*="padding:64px 48px"] { padding: 40px 20px !important; }
+      [style*="padding:48px"] { padding: 40px 20px !important; }
+
+      /* Stack all grids */
+      [style*="grid-template-columns: 1fr 500px"],
+      [style*="grid-template-columns:1fr 500px"] {
+        grid-template-columns: 1fr !important;
+      }
+      [style*="grid-template-columns: 1fr 1fr"],
+      [style*="grid-template-columns:1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+      }
+      [style*="grid-template-columns: repeat(3,1fr)"],
+      [style*="grid-template-columns:repeat(3,1fr)"] {
+        grid-template-columns: 1fr !important;
+      }
+
+      /* Buttons */
+      [style*="display:flex;gap:14px;margin-top:32px"] {
+        flex-direction: column !important;
+        gap: 10px !important;
+      }
+
+      /* Comparison table */
+      table { font-size: 11px !important; }
+      td, th { padding: 8px 6px !important; }
+
+      /* Footer */
+      html, body { overflow-x: hidden; }
+      footer { overflow-x: hidden; }
+      footer > div { max-width: 100% !important; padding: 0 20px !important; box-sizing: border-box !important; }
+      footer [style*="padding:64px 48px"] { padding: 40px 20px 0 !important; }
+    }
   </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"RealEstateAgent","name":"Passage Property Group","description":"We buy houses for cash in Grand Prairie, TX. No repairs, no fees, close in as little as 7 days.","areaServed":{"@type":"City","name":"Grand Prairie","addressRegion":"TX"},"telephone":"+16826103809","url":"https://passagepropertygroup.com/sell-house-grand-prairie.html","priceRange":"$$"}</script>
 <style>
