@@ -337,6 +337,9 @@
       .nav-links { display: none !important; }
       .nav-phone { display: none !important; }
       .nav-inner { padding: 0 20px !important; }
+      #hamburger { display: flex !important; flex-direction: column; gap: 5px; }
+      .nav-cta { font-size: 11px !important; padding: 8px 12px !important; }
+      nav.scrolled #hamburger span { background: #1c1c1e !important; }
 
       /* Sections */
       .hero-inner, section, [style*="padding:80px"] {
@@ -473,6 +476,22 @@
     <a href="about.html" class="nav-phone" style="color:#ffffff;font-size:13px;font-weight:600;">About Us</a>
     <a href="tel:+16826103809" class="nav-phone">📞 (682) 610-3809</a>
     <a href="#offer" class="nav-cta">Get Cash Offer</a>
+    <button id="hamburger" onclick="toggleMenu()" style="display:none;background:none;border:none;cursor:pointer;padding:6px;margin-left:8px;flex-direction:column;gap:5px;" aria-label="Menu">
+      <span style="display:block;width:22px;height:2px;background:#fff;border-radius:2px;"></span>
+      <span style="display:block;width:22px;height:2px;background:#fff;border-radius:2px;"></span>
+      <span style="display:block;width:22px;height:2px;background:#fff;border-radius:2px;"></span>
+    </button>
+  </div>
+  <!-- Mobile menu overlay -->
+  <div id="mobile-menu" style="display:none;position:fixed;inset:0;z-index:999;background:#fff;flex-direction:column;padding:80px 32px 40px;">
+    <button onclick="toggleMenu()" style="position:absolute;top:20px;right:20px;background:none;border:none;cursor:pointer;font-size:28px;color:#1c1c1e;">✕</button>
+    <a href="how-it-works.html" style="font-size:22px;font-weight:700;color:#1c1c1e;text-decoration:none;padding:16px 0;border-bottom:1px solid #e8e8e8;">How It Works</a>
+    <a href="faq.html" style="font-size:22px;font-weight:700;color:#1c1c1e;text-decoration:none;padding:16px 0;border-bottom:1px solid #e8e8e8;">FAQ</a>
+    <a href="about.html" style="font-size:22px;font-weight:700;color:#1c1c1e;text-decoration:none;padding:16px 0;border-bottom:1px solid #e8e8e8;">About Us</a>
+    <a href="blog.html" style="font-size:22px;font-weight:700;color:#1c1c1e;text-decoration:none;padding:16px 0;border-bottom:1px solid #e8e8e8;">Blog</a>
+    <a href="contact.html" style="font-size:22px;font-weight:700;color:#1c1c1e;text-decoration:none;padding:16px 0;border-bottom:1px solid #e8e8e8;">Contact</a>
+    <a href="tel:+16826103809" style="font-size:18px;font-weight:600;color:#6b7c5a;text-decoration:none;padding:16px 0;border-bottom:1px solid #e8e8e8;">☎ (682) 610-3809</a>
+    <a href="#offer" onclick="toggleMenu()" style="display:block;margin-top:32px;background:#6b7c5a;color:#fff;font-size:14px;font-weight:700;letter-spacing:0.06em;padding:16px;border-radius:4px;text-align:center;text-decoration:none;">GET CASH OFFER</a>
   </div>
 </nav>
 
@@ -1083,5 +1102,12 @@ document.getElementById('step2-form').addEventListener('submit', function(e) {
 });
 </script>
 
+<script>
+function toggleMenu() {
+  const menu = document.getElementById('mobile-menu');
+  menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+  document.body.style.overflow = menu.style.display === 'flex' ? 'hidden' : '';
+}
+</script>
 </body>
 </html>
