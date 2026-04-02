@@ -312,6 +312,117 @@
       .nav-phone{display:none;}
       .hero h1{font-size:52px;}
     }
+  
+    /* ── MOBILE RESPONSIVE ── */
+    @media (max-width: 768px) {
+
+      /* Hero */
+      .hero-inner {
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 100px 24px 40px !important;
+        gap: 32px !important;
+      }
+      .hero h1 {
+        font-size: clamp(36px, 10vw, 52px) !important;
+        line-height: 0.98 !important;
+      }
+      .hero-text { width: 100% !important; }
+      .hero-form { width: 100% !important; margin-left: 0 !important; margin-top: 0 !important; }
+      .form-card { padding: 24px 20px 20px !important; }
+      .trust-row { gap: 8px !important; }
+      .trust-pill { font-size: 11px !important; padding: 6px 10px !important; }
+
+      /* Nav */
+      .nav-links { display: none !important; }
+      .nav-phone { display: none !important; }
+      .nav-inner { padding: 0 20px !important; }
+
+      /* Sections */
+      .hero-inner, section, [style*="padding:80px"] {
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+      }
+
+      /* How it works cards */
+      .steps-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      /* Why us 2-col */
+      .why-grid {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+      }
+
+      /* City links */
+      .city-grid {
+        grid-template-columns: 1fr 1fr !important;
+      }
+
+      /* Footer */
+      .footer-cols {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 32px !important;
+      }
+
+      /* Fix inline-styled grids that don't have class names */
+      /* Why Us - 2 col editorial grid */
+      [style*="grid-template-columns:1.2fr 1fr"] {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+      }
+
+      /* City links - 4 col grid */
+      [style*="grid-template-columns:repeat(4,1fr)"] {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 8px !important;
+      }
+
+      /* Footer - 4 col grid */
+      [style*="grid-template-columns:280px 1fr 1fr 1fr"] {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 32px !important;
+      }
+
+      /* Footer pipe links - hide on mobile */
+      [style*="border-top:1px solid rgba(255,255,255,0.08)"] {
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+        font-size: 11px !important;
+      }
+
+      /* Reduce section padding on mobile for inline-styled sections */
+      [style*="padding:80px 48px"] {
+        padding: 48px 20px !important;
+      }
+      [style*="padding:72px 48px"] {
+        padding: 48px 20px !important;
+      }
+      [style*="padding:64px 48px"] {
+        padding: 40px 20px !important;
+      }
+      [style*="padding:32px 48px"] {
+        padding: 24px 20px !important;
+      }
+
+      /* Comparison table */
+      table { font-size: 12px !important; }
+      td { padding: 10px 8px !important; }
+
+      /* Trust badges */
+      [style*="justify-content:space-around"] {
+        justify-content: center !important;
+        gap: 20px !important;
+      }
+
+      /* Form row - stack phone and email */
+      .form-row {
+        flex-direction: column !important;
+        gap: 10px !important;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -406,7 +517,7 @@
         <div class="form-headline">Make the Move Easy.</div>
         <div class="form-headline">Get Your Cash Offer Today!</div>
         <p class="form-sub">Where convenience meets concierge.</p>
-        <form name="cash-offer" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+        <form name="cash-offer" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/" id="main-form">
           <input type="hidden" name="form-name" value="cash-offer"/>
           <input type="hidden" name="subject" value="New Cash Offer Request — Passage Property Group"/>
           <p style="display:none;"><input name="bot-field"/></p>
@@ -849,6 +960,128 @@
     body { padding-bottom:70px; }
   }
 </style>
+
+
+<!-- STEP 2 MODAL -->
+<div id="step2-modal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.7);align-items:center;justify-content:center;">
+  <div style="background:#fff;border-radius:8px;padding:40px;max-width:520px;width:90%;position:relative;box-shadow:0 40px 100px rgba(0,0,0,0.4);">
+    <div style="font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--olive);margin-bottom:12px;">One more step</div>
+    <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:22px;font-weight:800;color:#1c1c1e;margin-bottom:8px;line-height:1.3;">We're processing your request.</h2>
+    <p style="font-size:14px;color:#7a7469;margin-bottom:28px;line-height:1.6;">Would you mind providing a few more details? It helps us prepare the most accurate offer for your property.</p>
+    
+    <form name="cash-offer-details" method="POST" data-netlify="true" action="/?submitted=true" style="display:flex;flex-direction:column;gap:16px;">
+      <input type="hidden" name="form-name" value="cash-offer-details"/>
+      <input type="hidden" name="lead-email" id="hidden-email" value=""/>
+      <input type="hidden" name="lead-phone" id="hidden-phone" value=""/>
+      <input type="hidden" name="lead-address" id="hidden-address" value=""/>
+
+      <!-- Condition -->
+      <div>
+        <label style="font-size:12px;font-weight:700;color:#1c1c1e;letter-spacing:0.04em;text-transform:uppercase;display:block;margin-bottom:8px;">Property Condition <span style="color:var(--olive);">*</span></label>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;" id="condition-btns">
+          <span style="font-size:12px;color:#7a7469;width:100%;margin-bottom:2px;">Rate 1–10 (1 = Poor, 10 = Excellent)</span>
+          <button type="button" onclick="selectCondition(1)" id="cond-1" style="width:40px;height:40px;border:1px solid #e0e0e0;border-radius:4px;background:#fff;font-size:13px;font-weight:600;color:#7a7469;cursor:pointer;">1</button><button type="button" onclick="selectCondition(2)" id="cond-2" style="width:40px;height:40px;border:1px solid #e0e0e0;border-radius:4px;background:#fff;font-size:13px;font-weight:600;color:#7a7469;cursor:pointer;">2</button><button type="button" onclick="selectCondition(3)" id="cond-3" style="width:40px;height:40px;border:1px solid #e0e0e0;border-radius:4px;background:#fff;font-size:13px;font-weight:600;color:#7a7469;cursor:pointer;">3</button><button type="button" onclick="selectCondition(4)" id="cond-4" style="width:40px;height:40px;border:1px solid #e0e0e0;border-radius:4px;background:#fff;font-size:13px;font-weight:600;color:#7a7469;cursor:pointer;">4</button><button type="button" onclick="selectCondition(5)" id="cond-5" style="width:40px;height:40px;border:1px solid #e0e0e0;border-radius:4px;background:#fff;font-size:13px;font-weight:600;color:#7a7469;cursor:pointer;">5</button><button type="button" onclick="selectCondition(6)" id="cond-6" style="width:40px;height:40px;border:1px solid #e0e0e0;border-radius:4px;background:#fff;font-size:13px;font-weight:600;color:#7a7469;cursor:pointer;">6</button><button type="button" onclick="selectCondition(7)" id="cond-7" style="width:40px;height:40px;border:1px solid #e0e0e0;border-radius:4px;background:#fff;font-size:13px;font-weight:600;color:#7a7469;cursor:pointer;">7</button><button type="button" onclick="selectCondition(8)" id="cond-8" style="width:40px;height:40px;border:1px solid #e0e0e0;border-radius:4px;background:#fff;font-size:13px;font-weight:600;color:#7a7469;cursor:pointer;">8</button><button type="button" onclick="selectCondition(9)" id="cond-9" style="width:40px;height:40px;border:1px solid #e0e0e0;border-radius:4px;background:#fff;font-size:13px;font-weight:600;color:#7a7469;cursor:pointer;">9</button><button type="button" onclick="selectCondition(10)" id="cond-10" style="width:40px;height:40px;border:1px solid #e0e0e0;border-radius:4px;background:#fff;font-size:13px;font-weight:600;color:#7a7469;cursor:pointer;">10</button>
+        </div>
+        <input type="hidden" name="property_condition" id="condition-val" required/>
+      </div>
+
+      <!-- Timeline -->
+      <div>
+        <label style="font-size:12px;font-weight:700;color:#1c1c1e;letter-spacing:0.04em;text-transform:uppercase;display:block;margin-bottom:8px;">How soon are you looking to sell? <span style="color:var(--olive);">*</span></label>
+        <select name="timeline" required style="width:100%;padding:12px 14px;border:1px solid #e0e0e0;border-radius:4px;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;color:#1c1c1e;background:#fff;appearance:auto;">
+          <option value="" disabled selected>Select a timeframe...</option>
+          <option value="ASAP">As soon as possible</option>
+          <option value="1-3 months">Within 1–3 months</option>
+          <option value="3-6 months">Within 3–6 months</option>
+          <option value="Just exploring">Just exploring my options</option>
+        </select>
+      </div>
+
+      <!-- Asking price -->
+      <div>
+        <label style="font-size:12px;font-weight:700;color:#1c1c1e;letter-spacing:0.04em;text-transform:uppercase;display:block;margin-bottom:8px;">What are you hoping to get for the property? <span style="color:var(--olive);">*</span></label>
+        <input type="text" name="asking_price" placeholder="e.g. $250,000 or Not sure" required style="width:100%;padding:12px 14px;border:1px solid #e0e0e0;border-radius:4px;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;color:#1c1c1e;box-sizing:border-box;"/>
+      </div>
+
+      <!-- Reason -->
+      <div>
+        <label style="font-size:12px;font-weight:700;color:#1c1c1e;letter-spacing:0.04em;text-transform:uppercase;display:block;margin-bottom:8px;">Reason for selling <span style="color:#b0b8c4;font-weight:400;text-transform:none;">(optional)</span></label>
+        <select name="reason" style="width:100%;padding:12px 14px;border:1px solid #e0e0e0;border-radius:4px;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;color:#1c1c1e;background:#fff;appearance:auto;">
+          <option value="" selected>Prefer not to say</option>
+          <option value="Relocating">Relocating</option>
+          <option value="Downsizing">Downsizing</option>
+          <option value="Inherited property">Inherited property</option>
+          <option value="Divorce">Divorce</option>
+          <option value="Financial hardship">Financial hardship</option>
+          <option value="Tired landlord">Tired landlord</option>
+          <option value="Facing foreclosure">Facing foreclosure</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <button type="submit" style="width:100%;padding:16px;background:var(--olive);color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.06em;border:none;border-radius:4px;cursor:pointer;margin-top:4px;">SUBMIT & GET MY OFFER →</button>
+      <button type="button" onclick="skipModal()" style="background:none;border:none;font-size:12px;color:#b0b8c4;cursor:pointer;text-decoration:underline;">Skip</button>
+    </form>
+  </div>
+</div>
+
+<script>
+function selectCondition(val) {
+  document.getElementById('condition-val').value = val;
+  for(let i=1;i<=10;i++){
+    const btn = document.getElementById('cond-'+i);
+    btn.style.background = i===val ? 'var(--olive)' : '#fff';
+    btn.style.color = i===val ? '#fff' : '#7a7469';
+    btn.style.borderColor = i===val ? 'var(--olive)' : '#e0e0e0';
+  }
+}
+
+function skipModal() {
+  window.location.href = '/?submitted=true';
+}
+
+document.getElementById('main-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const form = this;
+  const data = new FormData(form);
+  
+  document.getElementById('hidden-email').value = data.get('email') || '';
+  document.getElementById('hidden-phone').value = data.get('phone') || '';
+  document.getElementById('hidden-address').value = data.get('address') || '';
+  
+  fetch('/', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+    body: new URLSearchParams(data).toString()
+  }).finally(() => {
+    document.getElementById('step2-modal').style.display = 'flex';
+  });
+});
+
+document.getElementById('step2-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const form = this;
+  const data = new FormData(form);
+  
+  fetch('/', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+    body: new URLSearchParams(data).toString()
+  }).finally(() => {
+    // Close modal
+    document.getElementById('step2-modal').style.display = 'none';
+    // Replace form card content with confirmation
+    document.querySelector('.form-card').innerHTML = `
+      <div style="text-align:center;padding:20px 0;">
+        <div style="font-size:36px;margin-bottom:16px;">✅</div>
+        <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:18px;font-weight:800;color:#1c1c1e;margin-bottom:8px;">We've received your inquiry!</div>
+        <p style="font-size:14px;color:#7a7469;line-height:1.6;">Someone from our team will be in touch shortly — usually within minutes.</p>
+        <a href="tel:+16826103809" style="display:inline-block;margin-top:16px;font-size:15px;font-weight:700;color:var(--olive);text-decoration:none;">(682) 610-3809</a>
+      </div>
+    `;
+  });
+});
+</script>
 
 </body>
 </html>
